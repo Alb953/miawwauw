@@ -60,15 +60,15 @@ export function Hero() {
               <Button
                 href={ROUTES.mascotas}
                 size="lg"
-                className="min-h-[3.9rem] justify-between rounded-[1.65rem] px-5 text-[1rem] shadow-[0_16px_30px_rgba(0,143,140,0.3)]"
+                className="min-h-[3.65rem] justify-between rounded-[1.5rem] px-4 text-[0.92rem] shadow-[0_14px_26px_rgba(0,143,140,0.28)]"
               >
-                <span className="flex items-center gap-4">
-                  <span className="grid h-9 w-9 place-items-center rounded-full border border-white/22 bg-white/10 text-[1.45rem] leading-none">
+                <span className="flex items-center gap-3">
+                  <span className="grid h-8 w-8 place-items-center rounded-full border border-white/22 bg-white/10 text-[1.3rem] leading-none">
                     ♡
                   </span>
                   <span>Adoptar una mascota</span>
                 </span>
-                <span className="grid h-8 w-8 place-items-center rounded-full bg-white/12 text-[1.7rem] leading-none">
+                <span className="grid h-7 w-7 place-items-center rounded-full bg-white/12 text-[1.45rem] leading-none">
                   ›
                 </span>
               </Button>
@@ -76,15 +76,15 @@ export function Hero() {
                 href="/panel/rescatista/mascotas/nueva"
                 variant="secondary"
                 size="lg"
-                className="min-h-[3.9rem] justify-between rounded-[1.65rem] border-white/90 bg-white px-5 text-[1rem] text-[var(--color-secondary)] shadow-[0_14px_26px_rgba(35,17,31,0.14)]"
+                className="min-h-[3.65rem] justify-between rounded-[1.5rem] border-white/90 bg-white px-4 text-[0.92rem] text-[var(--color-secondary)] shadow-[0_12px_22px_rgba(35,17,31,0.14)]"
               >
-                <span className="flex items-center gap-4">
-                  <span className="grid h-9 w-9 place-items-center rounded-full bg-[var(--color-secondary-soft)] text-[1.35rem] leading-none">
+                <span className="flex items-center gap-3">
+                  <span className="grid h-8 w-8 place-items-center rounded-full bg-[var(--color-secondary-soft)] text-[1.2rem] leading-none">
                     ⌂
                   </span>
-                  <span>Registrar mascota en adopcion</span>
+                  <span>Registrar mascota</span>
                 </span>
-                <span className="grid h-8 w-8 place-items-center rounded-full bg-[var(--color-secondary-soft)] text-[1.7rem] leading-none">
+                <span className="grid h-7 w-7 place-items-center rounded-full bg-[var(--color-secondary-soft)] text-[1.45rem] leading-none">
                   ›
                 </span>
               </Button>
