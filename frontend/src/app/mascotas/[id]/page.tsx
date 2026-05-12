@@ -14,7 +14,13 @@ export default async function MascotaDetailPage({
   params,
 }: MascotaDetailPageProps) {
   const { id } = await params;
-  const pet = await apiClient.pets.detail(id);
+  let pet = null;
+
+  try {
+    pet = await apiClient.pets.detail(id);
+  } catch (error) {
+    console.error(`No pudimos cargar el detalle publico de la mascota ${id}.`, error);
+  }
 
   if (!pet) {
     return (

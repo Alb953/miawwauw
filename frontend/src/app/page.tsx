@@ -5,9 +5,17 @@ import { SearchPanel } from "@/components/home/SearchPanel";
 import { SupportCard } from "@/components/home/SupportCard";
 import { UrgentCases } from "@/components/home/UrgentCases";
 import { apiClient } from "@/lib/api";
+import type { PetSummary } from "@/lib/types";
 
 export default async function Home() {
-  const allPets = await apiClient.pets.list();
+  let allPets: PetSummary[] = [];
+
+  try {
+    allPets = await apiClient.pets.list();
+  } catch (error) {
+    console.error("No pudimos cargar las mascotas para la pagina principal.", error);
+  }
+
   const mascotasDestacadas = allPets.filter((pet) => pet.featured).slice(0, 4);
   const casosUrgentes = allPets.filter((pet) => pet.urgent).slice(0, 2);
 

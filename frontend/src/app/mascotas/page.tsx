@@ -35,17 +35,23 @@ export default async function MascotasPage({
     urgent: params.urgent === "true",
   };
 
-  const filteredPets = (
-    await apiClient.pets.list({
-      species: filters.species === "all" ? undefined : filters.species,
-      age: filters.age === "all" ? undefined : filters.age,
-      gender: filters.gender === "all" ? undefined : filters.gender,
-      size: filters.size === "all" ? undefined : filters.size,
-      location: filters.location || undefined,
-      status: filters.status === "all" ? undefined : filters.status,
-      urgent: filters.urgent || undefined,
-    })
-  ).sort((a, b) => scorePet(b) - scorePet(a));
+  let filteredPets: PetSummary[] = [];
+
+  try {
+    filteredPets = (
+      await apiClient.pets.list({
+        species: filters.species === "all" ? undefined : filters.species,
+        age: filters.age === "all" ? undefined : filters.age,
+        gender: filters.gender === "all" ? undefined : filters.gender,
+        size: filters.size === "all" ? undefined : filters.size,
+        location: filters.location || undefined,
+        status: filters.status === "all" ? undefined : filters.status,
+        urgent: filters.urgent || undefined,
+      })
+    ).sort((a, b) => scorePet(b) - scorePet(a));
+  } catch (error) {
+    console.error("No pudimos cargar el catalogo publico de mascotas.", error);
+  }
 
   return (
     <main className="bg-soft-radial flex-1 pb-16">
