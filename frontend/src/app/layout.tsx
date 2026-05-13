@@ -14,7 +14,7 @@ const siteDescription =
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL?.trim() ||
   (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
-const previewImage = "/hero-reference-v2.png";
+const previewImage = "/opengraph.jpg";
 
 const nunitoSans = Nunito_Sans({
   variable: "--font-body",
