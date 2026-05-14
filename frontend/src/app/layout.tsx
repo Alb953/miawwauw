@@ -14,7 +14,7 @@ const siteDescription =
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL?.trim() ||
   (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
-const previewImage = "/opengraph.jpg";
+const previewImage = "/opengraph3.jpg";
 
 const nunitoSans = Nunito_Sans({
   variable: "--font-body",
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: previewImage,
-        width: 1200,
-        height: 630,
+        width: 1536,
+        height: 1024,
         alt: "Adopta Miauw Wau, adopcion responsable de mascotas",
       },
     ],
