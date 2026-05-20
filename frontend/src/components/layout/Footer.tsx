@@ -53,7 +53,7 @@ export function Footer() {
 
       <div className="border-t border-[var(--color-border)] bg-white">
         <div className="page-shell py-5 text-sm text-[var(--color-muted)]">
-          <p>{SITE_NAME} · Adopcion responsable en espanol.</p>
+          <p>{SITE_NAME}</p>
         </div>
       </div>
     </footer>
